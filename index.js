@@ -1,12 +1,4 @@
 
-function staircase(n) {
-    for (let i = 1; i <= n; i ++){
-        console.log(' '.repeat(n - i) + '#'.repeat(i))
-    }
-
-}
-
-staircase(6)
 
 // function timeConversion(s) {
 //     let timeOfDay = s.slice(-2);
