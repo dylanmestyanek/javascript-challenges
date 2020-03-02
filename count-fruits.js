@@ -12,7 +12,6 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
     function countFruit(fruits) {
         let count = 0
         fruits.forEach(fruit => {
-            console.log("FRUIT", fruit, "S", s, "T", t) 
             if (fruit >= s && fruit <= t) {
                 count++
             }

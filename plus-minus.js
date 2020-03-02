@@ -9,7 +9,6 @@ function plusMinus(arr) {
     console.log(positives)
     console.log(negatives)
     console.log(zeros)
-
 }
 
 plusMinus([-4, 3, -9, 0, 4, 1])

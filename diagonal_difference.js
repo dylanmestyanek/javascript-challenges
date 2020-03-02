@@ -8,10 +8,8 @@ function diagonalDifference(arr) {
         rightLeft += arr[i][arr.length - (i + 1)]
     }
 
-    console.log(rightLeft)
 
-    // return Math.abs(leftRight - rightLeft)
-
+    return Math.abs(leftRight - rightLeft)
 }
 
 console.log(diagonalDifference([[1,2,3], [4,5,6], [7,8,9]]))

@@ -12,7 +12,6 @@ function timeConversion(s) {
         }
         return s.slice(0, -2)
     }
-
 }
 
 console.log(timeConversion("12:05:45PM"))
