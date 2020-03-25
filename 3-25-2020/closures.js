@@ -58,38 +58,51 @@ willCounter();
 
 
 function addByX(x) {
-	const innerFunction = input => {
-    console.log(input + x);
+	const addByXInnerFunction = input => {
+    return input + x;
   }
   
-  return innerFunction;
+  return addByXInnerFunction;
 }
 
 // /*** Uncomment these to check your work! ***/
 const addByTwo = addByX(2);
-addByTwo(1); // => should return 3
-addByTwo(2); // => should return 4
-addByTwo(3); // => should return 5
+console.log(addByTwo(1)); // => should return 3
+console.log(addByTwo(2)); // => should return 4
+console.log(addByTwo(3)); // => should return 5
 
 const addByThree = addByX(3);
-addByThree(1); // => should return 4
-addByThree(2); // => should return 5
+console.log(addByThree(1)); // => should return 4
+console.log(addByThree(2)); // => should return 5
 
 const addByFour = addByX(4);
-addByFour(4); // => should return 8
-addByFour(5); // => should return 9
+console.log(addByFour(4)); // => should return 8
+console.log(addByFour(5)); // => should return 9
 
 console.log("\n---------------\n[CHALLENGE] 4:\n---------------")
 // CHALLENGE 4
 function once(func) {
+    let counter = 0;
+    let result;
 
+    const innerFunction = input => {
+        if (counter < 1) {
+            counter++;
+            result = func(input);
+            return result 
+        } else {
+            return result
+        }
+``    }
+
+    return innerFunction;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const onceFunc = once(addByTwo);
-// console.log(onceFunc(4));  // => should log 6
-// console.log(onceFunc(10));  // => should log 6
-// console.log(onceFunc(9001));  // => should log 6
+const onceFunc = once(addByTwo);
+console.log(onceFunc(4));  // => should log 6
+console.log(onceFunc(10));  // => should log 6
+console.log(onceFunc(9001));  // => should log 6
 
 
 // CHALLENGE 5
