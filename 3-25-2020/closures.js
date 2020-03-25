@@ -104,18 +104,29 @@ console.log(onceFunc(4));  // => should log 6
 console.log(onceFunc(10));  // => should log 6
 console.log(onceFunc(9001));  // => should log 6
 
-
+console.log("\n---------------\n[CHALLENGE] 5:\n---------------")
 // CHALLENGE 5
-function after(count, func) {
+function after(count, func) { 
+  let called = 1;
 
+  function innerLoop() {
+    if (called === count) {
+      func()
+    } else {
+      console.log("nothing is printed")
+      called++;
+    }
+  }
+
+  return innerLoop
 }
 
 // /*** Uncomment these to check your work! ***/
-// const called = function() { console.log('hello') };
-// const afterCalled = after(3, called);
-// afterCalled(); // => nothing is printed
-// afterCalled(); // => nothing is printed
-// afterCalled(); // => 'hello' is printed
+const called = function() { console.log('hello') };
+const afterCalled = after(3, called);
+afterCalled(); // => nothing is printed
+afterCalled(); // => nothing is printed
+afterCalled(); // => 'hello' is printed
 
 
 // CHALLENGE 6
