@@ -169,7 +169,7 @@ console.log("\n---------------\n[CHALLENGE] 8:\n---------------")
 // CHALLENGE 8
 function saveOutput(func, magicWord) {
   let values = {};
-
+  
   const insideFunction = input => {
     if (input !== magicWord) {
       values[input] = func(input);
@@ -178,7 +178,7 @@ function saveOutput(func, magicWord) {
       return values;
     }
   }
-
+  
   return insideFunction;
 }
 
@@ -190,6 +190,7 @@ console.log(multBy2AndLog(9)); // => should log 18
 console.log(multBy2AndLog('boo')); // => should log { 2: 4, 9: 18 }
 
 
+console.log("\n---------------\n[CHALLENGE] 9:\n---------------")
 // CHALLENGE 9
 function cycleIterator(array) {
   let counter = -1;
