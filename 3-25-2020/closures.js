@@ -314,19 +314,32 @@ myNewFunc1(); // => 2
 myNewFunc2(); // => 1
 myNewFunc2(); // => 2
 
-
+console.log("\n---------------\n[CHALLENGE] 15:\n---------------")
 // CHALLENGE 15
 function russianRoulette(num) {
 
+  const shoot = () => {
+    if (num > 1) {
+      num -= 1;
+      return "click"
+    } else if (num === 1) {
+      num -= 1
+      return "bang"
+    } else {
+      return "reload to play again"
+    }
+  };
+
+  return shoot;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const play = russianRoulette(3);
-// console.log(play()); // => should log 'click'
-// console.log(play()); // => should log 'click'
-// console.log(play()); // => should log 'bang'
-// console.log(play()); // => should log 'reload to play again'
-// console.log(play()); // => should log 'reload to play again'
+const play = russianRoulette(3);
+console.log(play()); // => should log 'click'
+console.log(play()); // => should log 'click'
+console.log(play()); // => should log 'bang'
+console.log(play()); // => should log 'reload to play again'
+console.log(play()); // => should log 'reload to play again'
 
 
 // CHALLENGE 16
