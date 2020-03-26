@@ -247,17 +247,32 @@ const stampedMultBy2 = dateStamp(n => n * 2);
 console.log(stampedMultBy2(4)); // => should log { date: (today's date), output: 8 }
 console.log(stampedMultBy2(6)); // => should log { date: (today's date), output: 12 }
 
-
+console.log("\n---------------\n[CHALLENGE] 12:\n---------------")
 // CHALLENGE 12
 function censor() {
+  const strings = {};
 
+    const takesStrings = (stringOne, stringTwo) => {
+      if (stringOne && stringTwo){
+        strings[stringOne] = stringTwo;
+
+      } else if (stringOne && !stringTwo) {
+        for (key in strings) {
+          stringOne = stringOne.replace(new RegExp(`${key}`), strings[key])
+        }
+       
+        return stringOne;
+      }
+    }
+
+    return takesStrings;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const changeScene = censor();
-// changeScene('dogs', 'cats');
-// changeScene('quick', 'slow');
-// console.log(changeScene('The quick, brown fox jumps over the lazy dogs.')); // => should log 'The slow, brown fox jumps over the lazy cats.'
+const changeScene = censor();
+changeScene('dogs', 'cats');
+changeScene('quick', 'slow');
+console.log(changeScene('The quick, brown fox jumps over the lazy dogs.')); // => should log 'The slow, brown fox jumps over the lazy cats.'
 
 
 // CHALLENGE 13
