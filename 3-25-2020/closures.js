@@ -231,16 +231,21 @@ const subtract = function(big, small) { return big - small; };
 const subFrom20 = defineFirstArg(subtract, 20);
 console.log(subFrom20(5)); // => should log 15
 
-
+console.log("\n---------------\n[CHALLENGE] 11:\n---------------")
 // CHALLENGE 11
 function dateStamp(func) {
 
+  const innerFunction = n => {
+    return { date: String(new Date()), output: func(n) }
+  };
+
+  return innerFunction;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const stampedMultBy2 = dateStamp(n => n * 2);
-// console.log(stampedMultBy2(4)); // => should log { date: (today's date), output: 8 }
-// console.log(stampedMultBy2(6)); // => should log { date: (today's date), output: 12 }
+const stampedMultBy2 = dateStamp(n => n * 2);
+console.log(stampedMultBy2(4)); // => should log { date: (today's date), output: 8 }
+console.log(stampedMultBy2(6)); // => should log { date: (today's date), output: 12 }
 
 
 // CHALLENGE 12
