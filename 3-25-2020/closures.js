@@ -137,21 +137,32 @@ function delay(func, wait) {
   }, wait);
 }
 
-delay(() => console.log("wuuduppp"), 5000)
+// delay(async () => await console.log("wuuduppp"), 5000)
 
 
 console.log("\n---------------\n[CHALLENGE] 7:\n---------------")
 // CHALLENGE 7
 function rollCall(names) {
+  let counter = 0;
+  
+  const printNames = () => {
+    if (counter < names.length) {
+      console.log(names[counter])
+      counter++;
+    } else {
+      console.log('Everyone accounted for.')
+    }
+  }
 
+  return printNames;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const rollCaller = rollCall(['Victoria', 'Juan', 'Ruth'])
-// rollCaller() // => should log 'Victoria'
-// rollCaller() // => should log 'Juan'
-// rollCaller() // => should log 'Ruth'
-// rollCaller() // => should log 'Everyone accounted for'
+const rollCaller = rollCall(['Victoria', 'Juan', 'Ruth'])
+rollCaller() // => should log 'Victoria'
+rollCaller() // => should log 'Juan'
+rollCaller() // => should log 'Ruth'
+rollCaller() // => should log 'Everyone accounted for'
 
 
 // CHALLENGE 8
