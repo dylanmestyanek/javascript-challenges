@@ -294,18 +294,25 @@ obj.setSecret(2)
 console.log("Retrieved secret:", obj.getSecret()) // => returns 2
 
 
+console.log("\n---------------\n[CHALLENGE] 14:\n---------------")
 // CHALLENGE 14
 function callTimes() {
+  let timesCalled = 0;
 
+  const innerCall = () => {
+    console.log(timesCalled += 1);
+  }
+
+  return innerCall;
 }
 
 // /*** Uncomment these to check your work! ***/
-// let myNewFunc1 = callTimes();
-// let myNewFunc2 = callTimes();
-// myNewFunc1(); // => 1
-// myNewFunc1(); // => 2
-// myNewFunc2(); // => 1
-// myNewFunc2(); // => 2
+let myNewFunc1 = callTimes();
+let myNewFunc2 = callTimes();
+myNewFunc1(); // => 1
+myNewFunc1(); // => 2
+myNewFunc2(); // => 1
+myNewFunc2(); // => 2
 
 
 // CHALLENGE 15
