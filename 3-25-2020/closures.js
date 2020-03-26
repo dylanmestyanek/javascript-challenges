@@ -192,16 +192,28 @@ console.log(multBy2AndLog('boo')); // => should log { 2: 4, 9: 18 }
 
 // CHALLENGE 9
 function cycleIterator(array) {
+  let counter = -1;
 
+  const printItemsInArray = () => {
+    if (counter < array.length - 1) {
+      counter++;
+      return array[counter];
+    } else {
+      counter = 0;
+      return array[counter];
+    }
+  };
+
+  return printItemsInArray;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const threeDayWeekend = ['Fri', 'Sat', 'Sun'];
-// const getDay = cycleIterator(threeDayWeekend);
-// console.log(getDay()); // => should log 'Fri'
-// console.log(getDay()); // => should log 'Sat'
-// console.log(getDay()); // => should log 'Sun'
-// console.log(getDay()); // => should log 'Fri'
+const threeDayWeekend = ['Fri', 'Sat', 'Sun'];
+const getDay = cycleIterator(threeDayWeekend);
+console.log(getDay()); // => should log 'Fri'
+console.log(getDay()); // => should log 'Sat'
+console.log(getDay()); // => should log 'Sun'
+console.log(getDay()); // => should log 'Fri'
 
 
 // CHALLENGE 10
