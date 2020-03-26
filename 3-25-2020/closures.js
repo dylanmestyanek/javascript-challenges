@@ -144,7 +144,7 @@ console.log("\n---------------\n[CHALLENGE] 7:\n---------------")
 // CHALLENGE 7
 function rollCall(names) {
   let counter = 0;
-  
+
   const printNames = () => {
     if (counter < names.length) {
       console.log(names[counter])
@@ -153,7 +153,7 @@ function rollCall(names) {
       console.log('Everyone accounted for.')
     }
   }
-
+  
   return printNames;
 }
 
@@ -165,17 +165,29 @@ rollCaller() // => should log 'Ruth'
 rollCaller() // => should log 'Everyone accounted for'
 
 
+console.log("\n---------------\n[CHALLENGE] 8:\n---------------")
 // CHALLENGE 8
 function saveOutput(func, magicWord) {
+  let values = {};
 
+  const insideFunction = input => {
+    if (input !== magicWord) {
+      values[input] = func(input);
+      return values[input];
+    } else {
+      return values;
+    }
+  }
+
+  return insideFunction;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const multiplyBy2 = function(num) { return num * 2; };
-// const multBy2AndLog = saveOutput(multiplyBy2, 'boo');
-// console.log(multBy2AndLog(2)); // => should log 4
-// console.log(multBy2AndLog(9)); // => should log 18
-// console.log(multBy2AndLog('boo')); // => should log { 2: 4, 9: 18 }
+const multiplyBy2 = function(num) { return num * 2; };
+const multBy2AndLog = saveOutput(multiplyBy2, 'boo');
+console.log(multBy2AndLog(2)); // => should log 4
+console.log(multBy2AndLog(9)); // => should log 18
+console.log(multBy2AndLog('boo')); // => should log { 2: 4, 9: 18 }
 
 
 // CHALLENGE 9
