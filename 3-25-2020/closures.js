@@ -401,22 +401,38 @@ const capLastAttempt2 = str => str.slice(0, -1) + str.slice(-1).toUpperCase();
 console.log(shouldCapitalizeLast(capLastAttempt1)); // => should log false
 console.log(shouldCapitalizeLast(capLastAttempt2)); // => should log true
 
-
+console.log("\n---------------\n[CHALLENGE] 18:\n---------------")
 // CHALLENGE 18
 function makeHistory(limit) {
+  const words = [];
 
+  const innerFunction = str => {
+    if (str !== 'undo') {
+      if (words.length < limit) {
+        words.push(str)
+      } else {
+        words.shift();
+        words.push(str);
+      }
+      return str + ' done'
+    } else {
+      return words.length ? words.pop() + ' undone' : 'nothing to undo'
+    }
+  };
+
+  return innerFunction;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const myActions = makeHistory(2);
-// console.log(myActions('jump')); // => should log 'jump done'
-// console.log(myActions('undo')); // => should log 'jump undone'
-// console.log(myActions('walk')); // => should log 'walk done'
-// console.log(myActions('code')); // => should log 'code done'
-// console.log(myActions('pose')); // => should log 'pose done'
-// console.log(myActions('undo')); // => should log 'pose undone'
-// console.log(myActions('undo')); // => should log 'code undone'
-// console.log(myActions('undo')); // => should log 'nothing to undo'
+const myActions = makeHistory(2);
+console.log(myActions('jump')); // => should log 'jump done'
+console.log(myActions('undo')); // => should log 'jump undone'
+console.log(myActions('walk')); // => should log 'walk done'
+console.log(myActions('code')); // => should log 'code done'
+console.log(myActions('pose')); // => should log 'pose done'
+console.log(myActions('undo')); // => should log 'pose undone'
+console.log(myActions('undo')); // => should log 'code undone'
+console.log(myActions('undo')); // => should log 'nothing to undo'
 
 
 // CHALLENGE 19
