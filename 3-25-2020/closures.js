@@ -369,22 +369,37 @@ console.log(avgSoFar()); // => should log 6
 console.log(avgSoFar(12)); // => should log 8
 console.log(avgSoFar()); // => should log 8
 
-
+console.log("\n---------------\n[CHALLENGE] 17:\n---------------")
 // CHALLENGE 17
 function makeFuncTester(arrOfTests) {
   
+  const innerFunction = func => {
+    let flag = true;
+
+    Array.from(arrOfTests)
+      .map(arr => [func(arr[0]), arr[1]])
+      .forEach(arr => {
+        if (arr[0] !== arr[1]) {
+          flag = false;
+        }
+      })
+
+    return flag
+  };
+
+  return innerFunction;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const capLastTestCases = [];
-// capLastTestCases.push(['hello', 'hellO']);
-// capLastTestCases.push(['goodbye', 'goodbyE']);
-// capLastTestCases.push(['howdy', 'howdY']);
-// const shouldCapitalizeLast = makeFuncTester(capLastTestCases);
-// const capLastAttempt1 = str => str.toUpperCase();
-// const capLastAttempt2 = str => str.slice(0, -1) + str.slice(-1).toUpperCase();
-// console.log(shouldCapitalizeLast(capLastAttempt1)); // => should log false
-// console.log(shouldCapitalizeLast(capLastAttempt2)); // => should log true
+const capLastTestCases = [];
+capLastTestCases.push(['hello', 'hellO']);
+capLastTestCases.push(['goodbye', 'goodbyE']);
+capLastTestCases.push(['howdy', 'howdY']);
+const shouldCapitalizeLast = makeFuncTester(capLastTestCases);
+const capLastAttempt1 = str => str.toUpperCase();
+const capLastAttempt2 = str => str.slice(0, -1) + str.slice(-1).toUpperCase();
+console.log(shouldCapitalizeLast(capLastAttempt1)); // => should log false
+console.log(shouldCapitalizeLast(capLastAttempt2)); // => should log true
 
 
 // CHALLENGE 18
