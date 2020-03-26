@@ -341,20 +341,33 @@ console.log(play()); // => should log 'bang'
 console.log(play()); // => should log 'reload to play again'
 console.log(play()); // => should log 'reload to play again'
 
-
+console.log("\n---------------\n[CHALLENGE] 16:\n---------------")
 // CHALLENGE 16
 function average() {
+  const numbers = [];
+  let average = 0;
 
+  const insideFunction = arg => {
+    if (arg) {
+      numbers.push(arg);
+      average = numbers.reduce((a,b) => a + b, 0) / numbers.length;
+      return average;
+    } else {
+      return average;
+    }
+  };
+
+  return insideFunction;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const avgSoFar = average();
-// console.log(avgSoFar()); // => should log 0
-// console.log(avgSoFar(4)); // => should log 4
-// console.log(avgSoFar(8)); // => should log 6
-// console.log(avgSoFar()); // => should log 6
-// console.log(avgSoFar(12)); // => should log 8
-// console.log(avgSoFar()); // => should log 8
+const avgSoFar = average();
+console.log(avgSoFar()); // => should log 0
+console.log(avgSoFar(4)); // => should log 4
+console.log(avgSoFar(8)); // => should log 6
+console.log(avgSoFar()); // => should log 6
+console.log(avgSoFar(12)); // => should log 8
+console.log(avgSoFar()); // => should log 8
 
 
 // CHALLENGE 17
