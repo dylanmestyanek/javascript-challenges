@@ -1,6 +1,5 @@
 // Type JavaScript here and click "Run Code" or press Ctrl + s
 // console.log('Hello, world!');
-
 console.log("\n---------------\n[CHALLENGE] 1:\n---------------")
 // CHALLENGE 1
 function createFunction() {
@@ -216,16 +215,21 @@ console.log(getDay()); // => should log 'Sat'
 console.log(getDay()); // => should log 'Sun'
 console.log(getDay()); // => should log 'Fri'
 
-
+console.log("\n---------------\n[CHALLENGE] 10:\n---------------")
 // CHALLENGE 10
 function defineFirstArg(func, arg) {
 
+  const insideFunction = innerArg => {
+    return func(arg, innerArg);
+  }; 
+
+  return insideFunction;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const subtract = function(big, small) { return big - small; };
-// const subFrom20 = defineFirstArg(subtract, 20);
-// console.log(subFrom20(5)); // => should log 15
+const subtract = function(big, small) { return big - small; };
+const subFrom20 = defineFirstArg(subtract, 20);
+console.log(subFrom20(5)); // => should log 15
 
 
 // CHALLENGE 11
