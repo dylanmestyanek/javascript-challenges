@@ -108,7 +108,7 @@ console.log("\n---------------\n[CHALLENGE] 5:\n---------------")
 // CHALLENGE 5
 function after(count, func) { 
   let called = 1;
-
+  
   function innerLoop() {
     if (called === count) {
       func()
@@ -117,7 +117,7 @@ function after(count, func) {
       called++;
     }
   }
-
+  
   return innerLoop
 }
 
@@ -129,12 +129,18 @@ afterCalled(); // => nothing is printed
 afterCalled(); // => 'hello' is printed
 
 
+console.log("\n---------------\n[CHALLENGE] 6:\n---------------")
 // CHALLENGE 6
 function delay(func, wait) {
-
+  setTimeout(() => {
+    func()
+  }, wait);
 }
 
+delay(() => console.log("wuuduppp"), 5000)
 
+
+console.log("\n---------------\n[CHALLENGE] 7:\n---------------")
 // CHALLENGE 7
 function rollCall(names) {
 
