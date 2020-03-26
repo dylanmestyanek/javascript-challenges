@@ -274,17 +274,24 @@ changeScene('dogs', 'cats');
 changeScene('quick', 'slow');
 console.log(changeScene('The quick, brown fox jumps over the lazy dogs.')); // => should log 'The slow, brown fox jumps over the lazy cats.'
 
-
+console.log("\n---------------\n[CHALLENGE] 13:\n---------------")
 // CHALLENGE 13
 function createSecretHolder(secret) {
 
+  return {
+    getSecret: () => secret,
+    setSecret: newSecret => {
+      secret = newSecret;
+      console.log("Secret set to:", newSecret);
+    } 
+  }
 }
 
 // /*** Uncomment these to check your work! ***/
-// obj = createSecretHolder(5)
-// obj.getSecret() // => returns 5
-// obj.setSecret(2)
-// obj.getSecret() // => returns 2
+obj = createSecretHolder(5)
+console.log("Retrieved secret:", obj.getSecret()) // => returns 5
+obj.setSecret(2)
+console.log("Retrieved secret:", obj.getSecret()) // => returns 2
 
 
 // CHALLENGE 14
