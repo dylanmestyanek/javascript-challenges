@@ -1,5 +1,5 @@
 /* CHALLENGE 1 */
-
+console.log("\n---------------\n[CHALLENGE] 1:\n---------------")
 function sayHowdy() {
     console.log('Howdy');
   }
@@ -13,16 +13,17 @@ function sayHowdy() {
   
   
   /* CHALLENGE 2 */
-  
+console.log("\n---------------\n[CHALLENGE] 2:\n---------------")
+
   function delayedGreet() {
-    // ADD CODE HERE
+    setTimeout(() => console.log("welcome"), 3000)
   }
   // Uncomment the following line to check your work!
-  // delayedGreet(); // should log (after 3 seconds): welcome
+  delayedGreet(); // should log (after 3 seconds): welcome
   
   
   /* CHALLENGE 3 */
-  
+  console.log("\n---------------\n[CHALLENGE] 3:\n---------------")  
   function helloGoodbye() {
     // ADD CODE HERE
   }
@@ -31,7 +32,7 @@ function sayHowdy() {
   
   
   /* CHALLENGE 4 */
-  
+console.log("\n---------------\n[CHALLENGE] 4:\n---------------")
   function brokenRecord() {
     // ADD CODE HERE
   }
