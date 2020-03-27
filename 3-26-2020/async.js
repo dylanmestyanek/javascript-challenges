@@ -53,7 +53,7 @@ console.log("\n---------------\n[CHALLENGE] 5:\n---------------")
   
   /* CHALLENGE 6 */
 console.log("\n---------------\n[CHALLENGE] 6:\n---------------")
-function everyXsecsForYsecs(func, interval, duration) {
+  function everyXsecsForYsecs(func, interval, duration) {
     // const funcInterval = setInterval(() => func(), interval * 1000);
     // setTimeout(() => clearInterval(funcInterval), duration * 1000);
   }
@@ -65,14 +65,19 @@ function everyXsecsForYsecs(func, interval, duration) {
   
   
   /* CHALLENGE 7 */
-  
-  function delayCounter(target, wait) {
-  
+console.log("\n---------------\n[CHALLENGE] 7:\n---------------")
+  // function delayCounter(target, wait) {
+  //   let counter = 1;
+  //   const innerFunc = () => {
+  //     setInterval(() => console.log(counter++), wait);
+  //   };
+
+  //   return innerFunc;
   }
   
   // UNCOMMENT THESE TO TEST YOUR WORK!
-  // const countLogger = delayCounter(3, 1000)
-  // countLogger();
+  const countLogger = delayCounter(3, 1000)
+  countLogger();
   // After 1 second, log 1
   // After 2 seconds, log 2
   // After 3 seconds, log 3
