@@ -42,12 +42,13 @@ console.log("\n---------------\n[CHALLENGE] 4:\n---------------")
   
   
   /* CHALLENGE 5 */
-  
+console.log("\n---------------\n[CHALLENGE] 5:\n---------------")
   function limitedRepeat() {
-    // ADD CODE HERE
+    const consoleLog = setInterval(() => console.log("hi for now"), 1000)
+    setTimeout(() => clearInterval(consoleLog), 5000)
   }
   // Uncomment the following line to check your work!
-  // limitedRepeat(); // should log (every second, for 5 seconds): hi for now
+  limitedRepeat(); // should log (every second, for 5 seconds): hi for now
   
   
   /* CHALLENGE 6 */
