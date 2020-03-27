@@ -83,33 +83,45 @@ console.log("\n---------------\n[CHALLENGE] 7:\n---------------")
   // After 3 seconds, log 3
   
   /* CHALLENGE 8 */
-  
+console.log("\n---------------\n[CHALLENGE] 8:\n---------------")
   function promised (val) {
     return new Promise((resolve, reject) => resolve(val))
   }
   
   // UNCOMMENT THESE TO TEST YOUR WORK!
-  const createPromise = promised('wait for it...');
-  createPromise.then((val) => console.log(val)); 
+  // const createPromise = promised('wait for it...');
+  // createPromise.then((val) => console.log(val)); 
   // will log "wait for it..." to the console after 2 seconds
   
   /* CHALLENGE 9 */
-  
+console.log("\n---------------\n[CHALLENGE] 9:\n---------------")
   class SecondClock {
     constructor(cb) {
-      // ADD CODE HERE
+      this.cb = cb;
+      this.seconds = 55;
+      this.timer = 0;
     }
-    // ADD METHODS HERE
+
+    start() {
+      this.timer = setInterval(() => {
+        this.seconds > 60 && (this.seconds = 1);
+        this.cb(this.seconds++);
+      }, 1000);
+    }
+
+    reset() {
+      clearInterval(this.timer);
+    }
   }
   
   // UNCOMMENT THESE TO TEST YOUR WORK!
-  // const clock = new SecondClock((val) => { console.log(val) });
-  // console.log("Started Clock.");
-  // clock.start();
-  // setTimeout(() => {
-  //     clock.reset();
-  //     console.log("Stopped Clock after 6 seconds.");
-  // }, 6000);
+  const clock = new SecondClock((val) => { console.log(val) });
+  console.log("Started Clock.");
+  clock.start();
+  setTimeout(() => {
+      clock.reset();
+      console.log("Stopped Clock after 6 seconds.");
+  }, 6000);
   
   /* CHALLENGE 10 */
   
