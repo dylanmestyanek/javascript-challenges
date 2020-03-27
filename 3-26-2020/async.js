@@ -44,23 +44,24 @@ console.log("\n---------------\n[CHALLENGE] 4:\n---------------")
   /* CHALLENGE 5 */
 console.log("\n---------------\n[CHALLENGE] 5:\n---------------")
   function limitedRepeat() {
-    const consoleLog = setInterval(() => console.log("hi for now"), 1000)
-    setTimeout(() => clearInterval(consoleLog), 5000)
+    // const consoleLog = setInterval(() => console.log("hi for now"), 1000)
+    // setTimeout(() => clearInterval(consoleLog), 5000)
   }
   // Uncomment the following line to check your work!
   limitedRepeat(); // should log (every second, for 5 seconds): hi for now
   
   
   /* CHALLENGE 6 */
-  
-  function everyXsecsForYsecs() {
-    // ADD CODE HERE
+console.log("\n---------------\n[CHALLENGE] 6:\n---------------")
+function everyXsecsForYsecs(func, interval, duration) {
+    // const funcInterval = setInterval(() => func(), interval * 1000);
+    // setTimeout(() => clearInterval(funcInterval), duration * 1000);
   }
   // Uncomment the following lines to check your work!
-  // function theEnd() {
-  //   console.log('This is the end!');
-  // }
-  // everyXsecsForYsecs(theEnd, 2, 20); // should invoke theEnd function every 2 seconds, for 20 seconds): This is the end!
+  function theEnd() {
+    console.log('This is the end!');
+  }
+  everyXsecsForYsecs(theEnd, 2, 20); // should invoke theEnd function every 2 seconds, for 20 seconds): This is the end!
   
   
   /* CHALLENGE 7 */
