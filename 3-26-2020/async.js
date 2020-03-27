@@ -5,7 +5,7 @@ function sayHowdy() {
   }
   
   function testMe() {
-    setTimeout(sayHowdy, 0);
+    // setTimeout(sayHowdy, 0);
     console.log('Partnah');
   }
   // After thinking it through, uncomment the following line to check your guess!
@@ -16,7 +16,7 @@ function sayHowdy() {
 console.log("\n---------------\n[CHALLENGE] 2:\n---------------")
 
   function delayedGreet() {
-    setTimeout(() => console.log("welcome"), 3000)
+    // setTimeout(() => console.log("welcome"), 3000)
   }
   // Uncomment the following line to check your work!
   delayedGreet(); // should log (after 3 seconds): welcome
@@ -25,10 +25,11 @@ console.log("\n---------------\n[CHALLENGE] 2:\n---------------")
   /* CHALLENGE 3 */
   console.log("\n---------------\n[CHALLENGE] 3:\n---------------")  
   function helloGoodbye() {
-    // ADD CODE HERE
+    console.log("hello")
+    // setTimeout(() => console.log("good bye"), 2000)
   }
   // Uncomment the following line to check your work!
-  // helloGoodbye(); // should log: hello // should also log (after 3 seconds): good bye
+  helloGoodbye(); // should log: hello // should also log (after 3 seconds): good bye
   
   
   /* CHALLENGE 4 */
