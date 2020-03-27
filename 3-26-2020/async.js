@@ -35,10 +35,10 @@ console.log("\n---------------\n[CHALLENGE] 2:\n---------------")
   /* CHALLENGE 4 */
 console.log("\n---------------\n[CHALLENGE] 4:\n---------------")
   function brokenRecord() {
-    // ADD CODE HERE
+    // setInterval(() => console.log("hi again"), 1000)
   }
   // Uncomment the following line to check your work!
-  // brokenRecord(); // should log (every second): hi again
+  brokenRecord(); // should log (every second): hi again
   
   
   /* CHALLENGE 5 */
