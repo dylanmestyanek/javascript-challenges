@@ -66,7 +66,7 @@ console.log("\n---------------\n[CHALLENGE] 6:\n---------------")
   
   /* CHALLENGE 7 */
 console.log("\n---------------\n[CHALLENGE] 7:\n---------------")
-  // function delayCounter(target, wait) {
+  function delayCounter(target, wait) {
   //   let counter = 1;
   //   const innerFunc = () => {
   //     setInterval(() => console.log(counter++), wait);
@@ -76,8 +76,8 @@ console.log("\n---------------\n[CHALLENGE] 7:\n---------------")
   }
   
   // UNCOMMENT THESE TO TEST YOUR WORK!
-  const countLogger = delayCounter(3, 1000)
-  countLogger();
+  // const countLogger = delayCounter(3, 1000)
+  // countLogger();
   // After 1 second, log 1
   // After 2 seconds, log 2
   // After 3 seconds, log 3
@@ -85,12 +85,12 @@ console.log("\n---------------\n[CHALLENGE] 7:\n---------------")
   /* CHALLENGE 8 */
   
   function promised (val) {
-    // ADD CODE HERE
+    return new Promise((resolve, reject) => resolve(val))
   }
   
   // UNCOMMENT THESE TO TEST YOUR WORK!
-  // const createPromise = promised('wait for it...');
-  // createPromise.then((val) => console.log(val)); 
+  const createPromise = promised('wait for it...');
+  createPromise.then((val) => console.log(val)); 
   // will log "wait for it..." to the console after 2 seconds
   
   /* CHALLENGE 9 */
