@@ -1,1 +1,1 @@
-let's pratice some javascripttttt :^)
+let's pratice some javascripttttt ... and typescript?? :^) 
