@@ -6,7 +6,6 @@ function minimumDistances(a: number[]) {
             [placement: string]: number;
         }
     }
-
     const values: CountValues = {};
 
     for (let i = 0; i < a.length; i++) {
