@@ -18,4 +18,4 @@ function minimumDistances(a: number[]) {
     return !filteredArr.length ? -1 : Math.min(...filteredArr.map(arr => arr.reduce((a,b) => Math.abs(a - b))))
 }
 
-console.log(minimumDistances([7, 1, 3, 4, 1, 7]))
+// console.log(minimumDistances([7, 1, 3, 4, 1, 7]))
