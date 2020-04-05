@@ -1,27 +1,21 @@
 function minimumDistances(a: number[]) {
 
     type CountValues = {
-        [k: string]: {
-            count: number;
-            numbers: number[];
-        }
+        [k: string]: number[];
     }
 
-    const values: CountValues = {};
+    const objOfIndices: CountValues = {};
 
     for (let i = 0; i < a.length; i++) {
-        if (a[i] in values) {
-            values[a[i]].count += 1;
-            values[a[i]].numbers.push(a[i])
+        if (a[i] in objOfIndices) {
+            objOfIndices[a[i]].push(i)
         } else {
-            values[a[i]] = {
-                count: 1,
-                numbers: [a[i]]
-            }
+            objOfIndices[a[i]] = [i]
         } 
     }
 
-    console.log(values)
+    const filteredArr = Object.values(objOfIndices).filter(arr => arr.length >= 2)
+    return !filteredArr.length ? -1 : Math.min(...filteredArr.map(arr => arr.reduce((a,b) => Math.abs(a - b))))
 }
 
 console.log(minimumDistances([7, 1, 3, 4, 1, 7]))
