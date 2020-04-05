@@ -10,13 +10,13 @@ function minimumDistances(a: number[]) {
     const values: CountValues = {};
 
     for (let i = 0; i < a.length; i++) {
-        if (values[a[i]]) {
+        if (a[i] in values) {
             values[a[i]].count += 1;
             values[a[i]].numbers.push(a[i])
         } else {
             values[a[i]] = {
-                count: 0,
-                numbers: []
+                count: 1,
+                numbers: [a[i]]
             }
         } 
     }
