@@ -1,17 +1,9 @@
 function minimumDistances(a) {
-    var values = {};
+    var objOfIndices = {};
     for (var i = 0; i < a.length; i++) {
-        if (values[a[i]]) {
-            values[a[i]].count += 1;
-            values[a[i]].numbers.push(a[i]);
-        }
-        else {
-            values[a[i]] = {
-                count: 0,
-                numbers: []
-            };
-        }
+        a[i] in objOfIndices ? objOfIndices[a[i]].push(i) : objOfIndices[a[i]] = [i];
     }
-    console.log(values);
+    var filteredArr = Object.values(objOfIndices).filter(function (arr) { return arr.length >= 2; });
+    return !filteredArr.length ? -1 : Math.min.apply(Math, filteredArr.map(function (arr) { return arr.reduce(function (a, b) { return Math.abs(a - b); }); }));
 }
 console.log(minimumDistances([7, 1, 3, 4, 1, 7]));
